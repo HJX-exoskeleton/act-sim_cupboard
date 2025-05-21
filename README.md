@@ -1,5 +1,7 @@
 # ACT: Action Chunking with Transformers
 
+ACT：https://github.com/tonyzhaozh/act
+
 ### Repo Structure
 - ``imitate_episodes.py`` Train and Evaluate ACT
 - ``policy.py`` An adaptor for ACT policy

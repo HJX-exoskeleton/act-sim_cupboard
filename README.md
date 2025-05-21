@@ -32,7 +32,7 @@ sim_cupboard_scripted: visualize
 
 To train ACT:
     
-    # Transfer Cube task
+    # Cupboard task
     python3 imitate_episodes.py \
     --task_name sim_cupboard_scripted \
     --ckpt_dir <ckpt dir> \

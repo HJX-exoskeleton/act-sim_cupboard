@@ -1,0 +1,23 @@
+act链接：https://github.com/tonyzhaozh/act
+------------------------------------------------------------------------------
+
+以sim_transfer_cube_scripted任务为例:
+
+MuJoCo仿真数据采集指令(--num_episodes表示采集数据的数量/默认50组):
+python3 record_sim_episodes.py --task_name sim_transfer_cube_scripted --dataset_dir /home/hjx/hjx_file/act-sim_cupboard/dataset/data/sim_transfer_cube_scripted --num_episodes 50
+可以添加标志--onscreen_render以查看实时渲染
+
+要在收集后可视化数据集，请运行:
+python3 visualize_episodes.py --dataset_dir /home/hjx/hjx_file/act-sim_cupboard/dataset/data/sim_transfer_cube_scripted --episode_idx 0
+
+对于模仿学习的任务训练与推理，请运行:
+python3 imitate_episodes.py --task_name sim_transfer_cube_scripted --ckpt_dir /home/hjx/hjx_file/act-sim_cupboard/dataset/ckpt/sim_transfer_cube_scripted --policy_class ACT --kl_weight 10 --chunk_size 100 --hidden_dim 512 --batch_size 4 --dim_feedforward 3200 --num_epochs 2000 --lr 1e-5 --seed 0
+python3 imitate_episodes.py --task_name sim_insertion_scripted --ckpt_dir /home/hjx/hjx_file/act-sim_cupboard/dataset/ckpt/sim_insertion_scripted --policy_class ACT --kl_weight 10 --chunk_size 100 --hidden_dim 512 --batch_size 4 --dim_feedforward 3200 --num_epochs 2000 --lr 1e-5 --seed 0
+加上--eval表示推理
+
+------------------------------------------------------------------------------
+
+# Cupboard
+python3 record_sim_episodes.py --task_name sim_cupboard_scripted --dataset_dir /home/hjx/hjx_file/act-sim_cupboard/dataset/data/sim_cupboard_scripted --num_episodes 50 --onscreen_render
+python3 visualize_episodes.py --dataset_dir /home/hjx/hjx_file/act-sim_cupboard/dataset/data/sim_cupboard_scripted --episode_idx 0
+python3 imitate_episodes.py --task_name sim_cupboard_scripted --ckpt_dir /home/hjx/hjx_file/act-sim_cupboard/dataset/ckpt/sim_cupboard_scripted --policy_class ACT --kl_weight 10 --chunk_size 100 --hidden_dim 512 --batch_size 4 --dim_feedforward 3200 --num_epochs 2000 --lr 1e-5 --seed 0

@@ -26,7 +26,7 @@ To visualize the episode after it is collected, run
     python3 visualize_episodes.py --dataset_dir <data save dir> --episode_idx 0
 
 sim_cupboard_scripted: visualize
-![image](https://github.com/M3-song/aloha-mujoco-sim/assets/156507453/facf2764-aa51-4ac5-a813-2a755cafb46f)
+![image](https://github.com/HJX-exoskeleton/act-sim_cupboard/blob/master/plot/sim_cupboard.jpg)
 
 To train ACT:
     
